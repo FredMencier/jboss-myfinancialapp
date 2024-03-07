@@ -25,10 +25,10 @@ import javax.ejb.Stateless;
  * 
  */
 @Stateless
-public class HelloService {
+public class FinancialService {
 
-    public String createHelloMessage(String name) {
-        return "Hello " + name + "!";
+    public String createFinancialMessage(String name) {
+        return "EAP6 Financial App : " + name + "!";
     }
 
 }

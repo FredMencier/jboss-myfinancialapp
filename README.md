@@ -1,13 +1,25 @@
+# EAP6 MyFinancial SampleApp 
+
+Modification du port par défaut :
+- http port : 8085
+- user : admin
+- pwd : RedHatJboss1234$
+
+For the system Java wrappers to find this JDK, symlink it with
+- sudo ln -sfn /usr/local/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
+
+openjdk@8 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have openjdk@8 first in your PATH, run:
+- echo 'export PATH="/usr/local/opt/openjdk@8/bin:$PATH"' >> /Users/fmencier/.bash_profile
 
 Start the JBoss EAP Server
 -------------------------
 
-1. Open a command prompt and navigate to the root of the JBoss EAP directory.
-2. The following shows the command line to start the server:
+        For MacOS:   EAP_HOME/bin/standalone.sh
 
-        For Linux:   EAP_HOME/bin/standalone.sh
-        For Windows: EAP_HOME\bin\standalone.bat
-
+EAP_HOME = /Users/fmencier/Projects/jboss-eap-6.4
  
 Build and Deploy the Quickstart
 -------------------------
@@ -26,7 +38,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 Access the application 
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-helloworld>. 
+URL de l'application : <http://localhost:8080/jboss-helloworld>. 
 
 
 Undeploy the Archive
@@ -51,3 +63,13 @@ If you want to debug the source code or look at the Javadocs of any library in t
 
         mvn dependency:sources
         mvn dependency:resolve -Dclassifier=javadoc
+
+
+Sonar localhost
+------------------------------------
+- Install dir : /Users/fmencier/Projects/sonarqube-10.4.1/bin/macosx-universal-64
+- Start : ./sonar.sh console
+- user : admin
+- password : sonar
+
+URL de l'application : <http://localhost:9000/projects>
