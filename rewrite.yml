@@ -104,6 +104,10 @@ displayName: Migrate java EJB to Quarkus recepies
 recipeList:
   - org.exemple.java.ejb.RefactorSessionBean
   - org.exemple.RefactorLocalInterfaces
+  - org.openrewrite.java.RemoveAnnotation:
+      annotationPattern: '@javax.ejb.Local'
+  - org.openrewrite.java.RemoveAnnotation:
+      annotationPattern: '@javax.ejb.Remote'
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
