@@ -1,6 +1,7 @@
 package org.fin.rest;
 
 import org.fin.ejb.forex.IMyForexServiceLocal;
+import org.fin.ejb.forex.MyForexServiceBean;
 
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
@@ -10,13 +11,11 @@ import java.util.List;
 @Path("/")
 public class FinancialAPI {
 
-    @EJB
-    IMyForexServiceLocal mForexServiceLocal;
-
     @GET
     @Path("/getAvailableCurrencies")
     public List<String> getAvailableCurrencies() {
-        return mForexServiceLocal.loadSomeData();
+        IMyForexServiceLocal myForexService = new MyForexServiceBean();
+        return myForexService.loadSomeData();
     }
 
 }

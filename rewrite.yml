@@ -37,6 +37,11 @@ recipeList:
       onlyIfUsing: javax.servlet.*
   - org.openrewrite.maven.AddDependency:
       groupId: io.quarkus
+      artifactId: quarkus-resteasy-reactive-jackson
+      version: latest.release
+      onlyIfUsing: javax.servlet.*
+  - org.openrewrite.maven.AddDependency:
+      groupId: io.quarkus
       artifactId: quarkus-smallrye-openapi
       version: latest.release
       onlyIfUsing: javax.servlet.*
@@ -173,3 +178,6 @@ recipeList:
   - org.exemple.maven.RemoveVersionArtifactId:
       groupId: io.quarkus
       artifactId: quarkus-undertow
+  - org.exemple.maven.RemoveVersionArtifactId:
+      groupId: io.quarkus
+      artifactId: quarkus-resteasy-reactive-jackson
