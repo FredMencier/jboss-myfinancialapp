@@ -28,7 +28,7 @@ import javax.ejb.Stateless;
 public class FinancialService {
 
     public String createFinancialMessage(String name) {
-        return "EAP6 Financial App : " + name + "!";
+        return name + " deploy on JBoss EAP6 Server";
     }
 
 }
