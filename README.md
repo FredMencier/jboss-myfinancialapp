@@ -1,4 +1,12 @@
-# EAP6 MyFinancial SampleApp 
+# EAP6 MyFinancialApp
+
+Application JEE EAP 6.4
+- Module EAR
+  - Packaging de l'app
+- Module EJB
+  - EJB Business (Stateless et Stateful)
+- Module WAR
+  - Servlet
 
 Modification du port par défaut :
 - http port : 8085
@@ -14,6 +22,9 @@ because this is an alternate version of another formula.
 If you need to have openjdk@8 first in your PATH, run:
 - echo 'export PATH="/usr/local/opt/openjdk@8/bin:$PATH"' >> /Users/fmencier/.bash_profile
 
+Mettre le jdk8 en premier dans le path
+- PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+
 Start the JBoss EAP Server
 -------------------------
 
@@ -21,48 +32,36 @@ Start the JBoss EAP Server
 
 EAP_HOME = /Users/fmencier/Projects/jboss-eap-6.4
  
-Build and Deploy the Quickstart
--------------------------
+Build and Deploy
+---------------
 
-_NOTE: The following build command assumes you have configured your Maven user settings. If you have not, you must include Maven setting arguments on the command line. See [Build and Deploy the Quickstarts](../README.md#build-and-deploy-the-quickstarts) for complete instructions and additional options._
+Build du projet sans les tests :
 
-1. Make sure you have started the JBoss EAP server as described above.
-2. Open a command prompt and navigate to the root directory of this quickstart.
-3. Type this command to build and deploy the archive:
+        mvn clean install -DskipTests
 
-        mvn clean install jboss-as:deploy
+Deploy du projet
 
-4. This will deploy `target/jboss-helloworld.war` to the running instance of the server.
+        mvn jboss-as:deploy
+
+Déploie le fichier  `jboss-myfinancialapp/MyFinancial/target/MyFinancial-1.0.0-SNAPSHOT.ear` sur l'instance du server jboss.
 
 
 Access the application 
 ---------------------
 
-URL de l'application : <http://localhost:8080/jboss-helloworld>. 
+URL de l'application : <http://localhost:8085/MyFinancialWeb/FinancialServlet>. 
 
 
 Undeploy the Archive
 --------------------
 
-1. Make sure you have started the JBoss EAP server as described above.
-2. Open a command prompt and navigate to the root directory of this quickstart.
-3. When you are finished testing, type this command to undeploy the archive:
+Undeploy l'allipcation
 
         mvn jboss-as:undeploy
-
-
-Run the Quickstart in JBoss Developer Studio or Eclipse
--------------------------------------
-You can also start the server and deploy the quickstarts from Eclipse using JBoss tools. For more information, see [Use JBoss Developer Studio or Eclipse to Run the Quickstarts](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/USE_JDBS.md#use-jboss-developer-studio-or-eclipse-to-run-the-quickstarts) 
-
 
 Debug the Application
 ------------------------------------
 
-If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following commands to pull them into your local repository. The IDE should then detect them.
-
-        mvn dependency:sources
-        mvn dependency:resolve -Dclassifier=javadoc
 
 
 Sonar localhost
