@@ -35,8 +35,8 @@ Start the JBoss EAP Server
 
 EAP_HOME = /Users/fmencier/Projects/jboss-eap-6.4
  
-Build and Deploy
----------------
+Build and Deploy the Archive
+---------------------------
 
 Build du projet sans les tests :
 
@@ -65,7 +65,7 @@ Undeploy l'allipcation
 Debug the Application
 ------------------------------------
 
-
+TODO
 
 Sonar localhost
 ------------------------------------
