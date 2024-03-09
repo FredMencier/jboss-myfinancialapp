@@ -16,19 +16,16 @@
  */
 package org.fin.ejb;
 
+import org.fin.util.PropsUtil;
+
 import javax.ejb.Stateless;
 
-/**
- * A simple CDI service which is able to say hello to someone
- * 
- * @author Pete Muir
- * 
- */
 @Stateless
 public class FinancialService {
 
-    public String createFinancialMessage(String name) {
-        return name + " deploy on JBoss EAP6 Server";
-    }
+    private final static String PROPS_SYSTEM_KEY = "MyFinancialApp.system";
 
+    public String getDeploymentInformations(String name) {
+        return name + " deploy on " + PropsUtil.getProperty(PROPS_SYSTEM_KEY);
+    }
 }

@@ -43,7 +43,7 @@ public class FinancialServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1>" + financialService.createFinancialMessage("MyFinancial App") + "</h1>");
+        writer.println("<h1>" + financialService.getDeploymentInformations("MyFinancial App") + "</h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }
