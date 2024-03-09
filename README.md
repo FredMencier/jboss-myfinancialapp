@@ -4,9 +4,12 @@ Application JEE EAP 6.4
 - Module EAR
   - Packaging de l'app
 - Module EJB
-  - EJB Business (Stateless et Stateful)
+  - EJB 3.0 Business (Stateless et Stateful)
 - Module WAR
   - Servlet
+
+Local JBoss EAP Server
+-------------------------
 
 Modification du port par défaut :
 - http port : 8085
