@@ -28,8 +28,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-@WebServlet("/HelloWorld")
+@WebServlet("/FinancialServlet")
 public class FinancialServlet extends HttpServlet {
 
     static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
