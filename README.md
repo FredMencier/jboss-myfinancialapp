@@ -101,7 +101,8 @@ Access the application
 ---------------------
 
 URL de la servlet : <http://localhost:8081/FinancialServlet>
-URL de l'API Rest : <http://localhost:8081/getAvailableCurrencies>
+URL de l'API Rest : <http://localhost:8081/rest/getAvailableCurrencies>
+
 
 -> Supprimer RestApplication.java (@ApplicationPath)
 -> Supprimer application.properties
