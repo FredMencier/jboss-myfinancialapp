@@ -55,8 +55,18 @@ recipeList:
       artifactId: quarkus-smallrye-openapi
       version: latest.release
       onlyIfUsing: javax.servlet.*
+  - org.openrewrite.maven.AddDependency:
+      groupId: io.quarkus
+      artifactId: quarkus-undertow
+      version: latest.release
+      onlyIfUsing: javax.servlet.*
   - org.exemple.maven.AddMavenQuarkusPlugin:
       businessModuleName: MyFinancialWeb
+  - org.openrewrite.maven.AddPlugin:
+      groupId: io.quarkus.platform
+      artifactId: quarkus-maven-plugin
+      version: 3.8.2
+      filePattern: 'pom.xml'
   - org.openrewrite.maven.RemoveDependency:
       groupId: org.jboss.spec.javax.ejb
       artifactId: jboss-ejb-api_3.1_spec
@@ -76,7 +86,7 @@ recipeList:
       groupId: org.projectlombok
       artifactId: lombok
       newVersion: 1.18.28
-  - org.openrewrite.maven.UpgradeDependencyVersion:
+  - org.openrewrite.maven.UpgradePluginVersion:
       groupId: io.smallrye
       artifactId: jandex-maven-plugin
       newVersion: latest.release
@@ -152,3 +162,9 @@ recipeList:
   - org.exemple.maven.RemoveVersionArtifactId:
       groupId: io.quarkus
       artifactId: quarkus-smallrye-openapi
+  - org.exemple.maven.RemoveVersionArtifactId:
+      groupId: io.quarkus
+      artifactId: quarkus-config-yaml
+  - org.exemple.maven.RemoveVersionArtifactId:
+      groupId: io.quarkus
+      artifactId: quarkus-undertow
