@@ -132,6 +132,7 @@ recipeList:
   - org.openrewrite.java.migrate.jakarta.JavaxEnterpriseToJakartaEnterprise
   - org.openrewrite.java.migrate.jakarta.JavaxTransactionMigrationToJakartaTransaction
   - org.openrewrite.java.migrate.jakarta.JavaxServletToJakartaServlet
+  - org.openrewrite.java.migrate.jakarta.JavaxWsToJakartaWs
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
