@@ -6,6 +6,7 @@ import org.jboss.ejb3.annotation.TransactionTimeout;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -26,6 +27,6 @@ public class MyForexServiceBean implements IMyForexServiceRemote, IMyForexServic
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public List<String> loadSomeData() {
-        return Collections.emptyList();
+        return Arrays.asList("CHF", "EUR", "USD");
     }
 }
