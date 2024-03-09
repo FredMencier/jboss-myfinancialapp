@@ -1,4 +1,6 @@
-# EAP6 MyFinancialApp
+# Migration Automatique de MyFinancialApp en EAP 6.4 vers Quarkus 3.8.2
+
+## EAP6 MyFinancialApp
 
 Application JEE EAP 6.4
 - Module EAR
@@ -52,7 +54,8 @@ Déploie le fichier  `jboss-myfinancialapp/MyFinancial/target/MyFinancial-1.0.0-
 Access the application 
 ---------------------
 
-URL de l'application : <http://localhost:8085/MyFinancialWeb/FinancialServlet>. 
+URL de la servlet : <http://localhost:8085/MyFinancialWeb/FinancialServlet>
+URL de l'API Rest : <http://localhost:8085/MyFinancialWeb/rest/getAvailableCurrencies>
 
 
 Undeploy the Archive
@@ -74,4 +77,32 @@ Sonar localhost
 - user : admin
 - password : sonar
 
-URL de l'application : <http://localhost:9000/projects>
+URL de Sonar : <http://localhost:9000/projects>
+
+
+## Quarkus MyFinancialApp
+
+Application Quarkus 3.8.2
+- Conservation des Modules sauf le Module EAR
+
+
+Local JBoss EAP Server
+-------------------------
+
+Modification du port par défaut :
+- http port : 8081
+
+Start the JBoss EAP Server
+-------------------------
+
+mvn clean install quarkus:dev
+
+Access the application
+---------------------
+
+URL de la servlet : <http://localhost:8081/FinancialServlet>
+URL de l'API Rest : <http://localhost:8081/getAvailableCurrencies>
+
+-> Supprimer RestApplication.java (@ApplicationPath)
+-> Supprimer application.properties
+-> Remplacer le PropsUtil.getProperty par @ConfigProperty
