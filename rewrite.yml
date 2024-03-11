@@ -145,6 +145,13 @@ recipeList:
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
+name: org.fin.migrateToQuarkus.properties
+displayName: Migrate to Quarkus properties file to yaml file
+recipeList:
+  - org.exemple.java.properties.RefactorProperties
+
+---
+type: specs.openrewrite.org/v1beta/recipe
 name: org.fin.migrateToQuarkus.pom.clean
 displayName: Migrate to Quarkus Pom.xml recepies
 recipeList:
