@@ -26,6 +26,7 @@ public class FinancialService {
     private final static String PROPS_SYSTEM_KEY = "MyFinancialApp.system";
 
     public String getDeploymentInformations(String name) {
-        return name + " deploy on " + PropsUtil.getProperty(PROPS_SYSTEM_KEY);
+        String serverName = PropsUtil.getProperty(PROPS_SYSTEM_KEY);
+        return name + " deploy on " + serverName;
     }
 }
