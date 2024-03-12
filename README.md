@@ -15,6 +15,9 @@ Local JBoss EAP Server
 
 Modification du port par défaut :
 - http port : 8085
+
+Console d'admin :
+- http://localhost:9990/
 - user : admin
 - pwd : RedHatJboss1234$
 
@@ -28,7 +31,7 @@ If you need to have openjdk@8 first in your PATH, run:
 - echo 'export PATH="/usr/local/opt/openjdk@8/bin:$PATH"' >> /Users/fmencier/.bash_profile
 
 Mettre le jdk8 en premier dans le path
-- PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+- export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 
 Start the JBoss EAP Server
 -------------------------
