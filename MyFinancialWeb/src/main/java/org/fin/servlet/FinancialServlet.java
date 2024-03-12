@@ -51,5 +51,4 @@ public class FinancialServlet extends HttpServlet {
         writer.println(PAGE_FOOTER);
         writer.close();
     }
-
 }
