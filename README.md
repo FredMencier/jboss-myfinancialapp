@@ -15,6 +15,9 @@ Local JBoss EAP Server
 
 Modification du port par défaut :
 - http port : 8085
+
+Console d'admin :
+- http://localhost:9990/
 - user : admin
 - pwd : RedHatJboss1234$
 
