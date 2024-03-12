@@ -3,7 +3,6 @@ package org.fin.rest;
 import org.fin.ejb.forex.IMyForexServiceLocal;
 import org.fin.ejb.forex.MyForexServiceBean;
 
-import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.util.List;
