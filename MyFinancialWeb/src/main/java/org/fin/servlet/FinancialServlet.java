@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.ejb.EJB;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,11 +38,16 @@ public class FinancialServlet extends HttpServlet {
     FinancialService financialService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
         writer.println("<h1>" + financialService.getDeploymentInformations("MyFinancial App") + "</h1>");
+        writer.println("<p>");
+        writer.println("REST API Available :<br>");
+        writer.println("<ul>");
+        writer.println("<li><a href=\"http://localhost:8085/MyFinancialWeb/rest/getAvailableCurrencies\">http://localhost:8085/MyFinancialWeb/rest/getAvailableCurrencies</a>");
+        writer.println("</ul>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }
