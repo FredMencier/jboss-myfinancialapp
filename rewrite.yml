@@ -91,6 +91,10 @@ recipeList:
       groupId: org.projectlombok
       artifactId: lombok
       newVersion: 1.18.28
+  - org.openrewrite.maven.ChangePluginConfiguration:
+      groupId: org.apache.maven.plugins
+      artifactId: maven-compiler-plugin
+      configuration:  <annotationProcessorPaths><path><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><version>1.18.28</version></path></annotationProcessorPaths>
   - org.openrewrite.maven.UpgradePluginVersion:
       groupId: io.smallrye
       artifactId: jandex-maven-plugin

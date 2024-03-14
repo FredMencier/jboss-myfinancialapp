@@ -14,6 +14,7 @@
         <module>MyFinancial</module>
         <module>MyFinancialEjb</module>
         <module>MyFinancialWeb</module>
+        <module>MyFinancialDto</module>
     </modules>
 
     <properties>
