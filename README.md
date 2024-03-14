@@ -109,4 +109,4 @@ URL de l'API Rest : <http://localhost:8081/rest/getAvailableCurrencies>
 
 -> Supprimer RestApplication.java (@ApplicationPath)
 -> Supprimer application.properties
--> Remplacer le PropsUtil.getProperty par @ConfigProperty
+-> Alimenter le application yaml avec application.properties
