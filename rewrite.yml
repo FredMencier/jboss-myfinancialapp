@@ -201,7 +201,7 @@ displayName: Migrate to Quarkus java recepies
 recipeList:
   - org.openrewrite.text.FindAndReplace:
       find: /MyFinancialWeb/rest/
-      replace: /rest/
+      replace: /
       filePattern: '**/*.java'
   - org.openrewrite.DeleteSourceFiles:
       filePattern: '**/RestApplication.java'
