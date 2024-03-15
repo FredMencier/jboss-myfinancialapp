@@ -193,7 +193,17 @@ recipeList:
   - org.exemple.maven.RemoveVersionArtifactId:
       groupId: io.quarkus
       artifactId: quarkus-resteasy-reactive-jackson
+
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.fin.migrateToQuarkus.java.clean
+displayName: Migrate to Quarkus java recepies
+recipeList:
   - org.openrewrite.text.FindAndReplace:
       find: /MyFinancialWeb/rest/
       replace: /rest/
       filePattern: '**/*.java'
+  - org.openrewrite.DeleteSourceFiles:
+      filePattern: '**/RestApplication.java'
+  - org.openrewrite.DeleteSourceFiles:
+      filePattern: '**/application.properties'
