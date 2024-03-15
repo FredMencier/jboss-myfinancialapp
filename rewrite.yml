@@ -118,10 +118,6 @@ recipeList:
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@javax.ejb.Remote'
   - org.openrewrite.java.RemoveUnusedImports
-  - org.openrewrite.text.FindAndReplace:
-      find: /MyFinancialWeb/rest/
-      replace: /rest/
-      filePattern: '**/*.java'
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
@@ -197,3 +193,7 @@ recipeList:
   - org.exemple.maven.RemoveVersionArtifactId:
       groupId: io.quarkus
       artifactId: quarkus-resteasy-reactive-jackson
+  - org.openrewrite.text.FindAndReplace:
+      find: /MyFinancialWeb/rest/
+      replace: /rest/
+      filePattern: '**/*.java'
