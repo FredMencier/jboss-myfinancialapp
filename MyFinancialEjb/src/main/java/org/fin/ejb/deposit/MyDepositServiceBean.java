@@ -20,7 +20,7 @@ public class MyDepositServiceBean implements IMyDepositServiceLocal {
     @Override
     public Double calculateInterest() {
         Double d = new Double(1.0);
-        myServiceLocal.loadSomeData();
+        myServiceLocal.currencies();
         return d * 0.95D;
     }
 

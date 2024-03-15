@@ -104,9 +104,10 @@ Access the application
 ---------------------
 
 URL de la servlet : <http://localhost:8081/FinancialServlet>
-URL de l'API Rest : <http://localhost:8081/rest/getAvailableCurrencies>
+URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
 
 
 -> Supprimer RestApplication.java (@ApplicationPath)
 -> Supprimer application.properties
 -> Alimenter le application yaml avec application.properties
+-> Servlet mettre un fond d'écran Devoxx

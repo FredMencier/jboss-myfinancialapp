@@ -19,6 +19,12 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>MyFinancialDto</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>MyFinancialEjb</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
@@ -38,6 +44,12 @@
                 <version>2.10.1</version>
                 <configuration>
                     <modules>
+                        <jarModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>MyFinancialDto</artifactId>
+                            <bundleFileName>MyFinancialDto.jar</bundleFileName>
+                            <includeInApplicationXml>true</includeInApplicationXml>
+                        </jarModule>
                         <webModule>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>MyFinancialWeb</artifactId>

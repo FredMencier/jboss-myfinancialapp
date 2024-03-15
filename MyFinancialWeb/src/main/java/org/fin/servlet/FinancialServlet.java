@@ -46,7 +46,7 @@ public class FinancialServlet extends HttpServlet {
         writer.println("<p>");
         writer.println("REST API Available :<br>");
         writer.println("<ul>");
-        writer.println("<li><a href=\"http://localhost:8085/MyFinancialWeb/rest/getAvailableCurrencies\">http://localhost:8085/MyFinancialWeb/rest/getAvailableCurrencies</a>");
+        writer.println("<li><a href=\"/MyFinancialWeb/rest/currency/currencies\">/MyFinancialWeb/rest/currency/currencies</a>");
         writer.println("</ul>");
         writer.println(PAGE_FOOTER);
         writer.close();
