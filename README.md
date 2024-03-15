@@ -101,7 +101,7 @@ Start the JBoss EAP Server
 mvn clean install quarkus:dev
 
 Access the application
----------------------
+-----------[rewrite.patch](target%2Frewrite%2Frewrite.patch)----------
 
 URL de la servlet : <http://localhost:8081/FinancialServlet>
 URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
@@ -111,3 +111,5 @@ URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
 -> Supprimer application.properties
 -> Alimenter le application yaml avec application.properties
 -> Servlet mettre un fond d'écran Devoxx
+-> voir si possible d'ajouter un bean dans le consructeur de FinancialAPI
+-> voir si possible d'appeler FindAndReplace depuis le code en paramétrant MyFinancialWeb
