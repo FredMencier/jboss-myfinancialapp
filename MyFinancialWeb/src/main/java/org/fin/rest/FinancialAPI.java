@@ -12,11 +12,16 @@ import java.util.List;
 @Path("/currency")
 public class FinancialAPI {
 
+    MyForexServiceBean myForexService;
+
+    public FinancialAPI(MyForexServiceBean myForexServiceBean)  {
+        myForexService = myForexServiceBean;
+    }
+
     @GET
     @Path("/currencies")
     @Produces({"application/json"})
     public List<Currency> getCurrencies() {
-        IMyForexServiceLocal myForexService = new MyForexServiceBean();
         return myForexService.currencies();
     }
 }

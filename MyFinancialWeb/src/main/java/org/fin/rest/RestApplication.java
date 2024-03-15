@@ -1,5 +1,7 @@
 package org.fin.rest;
 
+import org.fin.ejb.forex.MyForexServiceBean;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
@@ -11,7 +13,7 @@ public class RestApplication extends Application {
     private Set<Object> services = new HashSet<>();
 
     public RestApplication() {
-        services.add(new FinancialAPI());
+        services.add(new FinancialAPI(new MyForexServiceBean()));
     }
 
     @Override
