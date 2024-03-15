@@ -117,6 +117,7 @@ recipeList:
       annotationPattern: '@javax.ejb.Local'
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@javax.ejb.Remote'
+  - org.openrewrite.java.RemoveUnusedImports
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
