@@ -1,7 +1,6 @@
 package org.fin.rest;
 
 import org.fin.dto.Currency;
-import org.fin.ejb.forex.IMyForexServiceLocal;
 import org.fin.ejb.forex.MyForexServiceBean;
 
 import javax.ws.rs.GET;
