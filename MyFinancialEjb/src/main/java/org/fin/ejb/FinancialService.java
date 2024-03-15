@@ -27,6 +27,6 @@ public class FinancialService {
 
     public String getDeploymentInformations(String name) {
         String serverName = PropsUtil.getProperty(PROPS_SYSTEM_KEY);
-        return name + " deploy on " + serverName;
+        return name + serverName;
     }
 }
