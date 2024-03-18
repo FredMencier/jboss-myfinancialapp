@@ -211,4 +211,4 @@ recipeList:
   - org.openrewrite.text.FindAndReplace:
       find: 'Powered by JBoss EAP6'
       replace: 'Propulsed by Quarkus'
-      filePattern: '**/*.yaml'
+      filePattern: '**/application*.yaml'
