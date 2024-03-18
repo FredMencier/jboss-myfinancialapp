@@ -208,3 +208,7 @@ recipeList:
       filePattern: '**/RestApplication.java'
   - org.openrewrite.DeleteSourceFiles:
       filePattern: '**/application.properties'
+  - org.openrewrite.text.FindAndReplace:
+      find: 'Powered by JBoss EAP6'
+      replace: 'Propulsed by Quarkus'
+      filePattern: '**/*.yaml'
