@@ -154,6 +154,7 @@ name: org.fin.migrateToQuarkus.properties
 displayName: Migrate to Quarkus properties file to yaml file
 recipeList:
   - org.exemple.java.properties.RefactorProperties
+  - org.exemple.yaml.ConvertPropsToYaml
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
