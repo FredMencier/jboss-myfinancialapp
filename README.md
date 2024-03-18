@@ -107,9 +107,11 @@ URL de la servlet : <http://localhost:8081/FinancialServlet>
 URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
 
 
--> Supprimer RestApplication.java (@ApplicationPath)
--> Supprimer application.properties
--> Alimenter le application yaml avec application.properties
 -> Servlet mettre un fond d'écran Devoxx
 -> voir si possible d'ajouter un bean dans le consructeur de FinancialAPI
 -> voir si possible d'appeler FindAndReplace depuis le code en paramétrant MyFinancialWeb
+
+
+Test : 18.03
+- 30 minutes dias + demo1
+- 15 minutes demo2
