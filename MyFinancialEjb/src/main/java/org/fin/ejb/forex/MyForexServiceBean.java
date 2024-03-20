@@ -1,18 +1,25 @@
 package org.fin.ejb.forex;
 
+import org.fin.da.FinancialDA;
 import org.fin.dto.Currency;
+import org.fin.entity.CurrencyEntity;
 import org.jboss.ejb3.annotation.Clustered;
 import org.jboss.ejb3.annotation.TransactionTimeout;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
-import org.fin.da.FinancialDA;
 
 @Clustered
 @Stateless
 public class MyForexServiceBean implements IMyForexServiceRemote, IMyForexServiceLocal {
+
+    @PersistenceContext(unitName = "FinancialPU")
+    private EntityManager entityManager;
+
     @Override
     public String doBusinessTask() {
         return "business ok";
@@ -27,6 +34,7 @@ public class MyForexServiceBean implements IMyForexServiceRemote, IMyForexServic
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public List<Currency> currencies() {
-        return FinancialDA.getInstance().findCurrencies();
+        FinancialDA financialDA = new FinancialDA(entityManager);
+        return financialDA.findCurrencies();
     }
 }
