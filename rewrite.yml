@@ -70,6 +70,11 @@ recipeList:
       artifactId: quarkus-hibernate-orm
       version: latest.release
       onlyIfUsing: javax.persistence.*
+  - org.openrewrite.maven.AddDependency:
+      groupId: io.quarkus
+      artifactId: quarkus-jdbc-mysql
+      version: latest.release
+      onlyIfUsing: javax.servlet.*
   - org.exemple.maven.AddMavenQuarkusPlugin:
       businessModuleName: MyFinancialWeb
   - org.openrewrite.maven.AddPlugin:
@@ -217,6 +222,8 @@ recipeList:
       filePattern: '**/RestApplication.java'
   - org.openrewrite.DeleteSourceFiles:
       filePattern: '**/application.properties'
+  - org.openrewrite.DeleteSourceFiles:
+      filePattern: '**/persistence.xml'
   - org.openrewrite.text.FindAndReplace:
       find: 'Powered by JBoss EAP6'
       replace: 'Propulsed by Quarkus'
