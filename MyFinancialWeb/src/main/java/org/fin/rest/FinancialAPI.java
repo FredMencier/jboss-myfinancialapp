@@ -15,6 +15,10 @@ public class FinancialAPI {
     @EJB
     IMyForexServiceLocal myForexService;
 
+    /**
+     * Donne les liste des monnaies disponibles
+     * @return
+     */
     @GET
     @Path("/currencies")
     @Produces({"application/json"})
