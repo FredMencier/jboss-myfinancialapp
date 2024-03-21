@@ -65,6 +65,11 @@ recipeList:
       artifactId: quarkus-undertow
       version: latest.release
       onlyIfUsing: javax.servlet.*
+  - org.openrewrite.maven.AddDependency:
+      groupId: io.quarkus
+      artifactId: quarkus-hibernate-orm
+      version: latest.release
+      onlyIfUsing: javax.persistence.*
   - org.exemple.maven.AddMavenQuarkusPlugin:
       businessModuleName: MyFinancialWeb
   - org.openrewrite.maven.AddPlugin:
@@ -81,6 +86,9 @@ recipeList:
   - org.openrewrite.maven.RemoveDependency:
       groupId: org.jboss.ejb3
       artifactId: jboss-ejb3-ext-api
+  - org.openrewrite.maven.RemoveDependency:
+      groupId: org.hibernate.javax.persistence
+      artifactId : hibernate-jpa-2.0-api
   - org.openrewrite.maven.RemovePlugin:
       groupId: org.apache.maven.plugins
       artifactId: maven-war-plugin
@@ -147,6 +155,7 @@ recipeList:
   - org.openrewrite.java.migrate.jakarta.JavaxTransactionMigrationToJakartaTransaction
   - org.openrewrite.java.migrate.jakarta.JavaxServletToJakartaServlet
   - org.openrewrite.java.migrate.jakarta.JavaxWsToJakartaWs
+  - org.openrewrite.java.migrate.jakarta.JavaxPersistenceToJakartaPersistence
 
 ---
 type: specs.openrewrite.org/v1beta/recipe
