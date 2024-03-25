@@ -3,7 +3,10 @@ http://localhost:9990/console/App.html#home
 EAP6 App
 http://localhost:8085/MyFinancialWeb/FinancialServlet
 
+
+
 Quarkus dev-ui
 http://localhost:8081/q/dev-ui/extensions
 Quarkus App
 http://localhost:8081/FinancialServlet
+
