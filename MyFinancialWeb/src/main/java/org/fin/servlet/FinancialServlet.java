@@ -30,7 +30,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/FinancialServlet")
 public class FinancialServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>FinancialServlet</title></head><body>";
+    static String PAGE_HEADER = "<html><head><title>FinancialServlet</title><style>h1 {text-align: center;}</style></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 
