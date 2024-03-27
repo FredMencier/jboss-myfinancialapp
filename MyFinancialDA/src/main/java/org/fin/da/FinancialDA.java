@@ -29,18 +29,5 @@ public class FinancialDA {
         return resultList.stream()
                 .map(currencyEntity -> new Currency(currencyEntity.getCode(), currencyEntity.getNum(), currencyEntity.getName(), currencyEntity.getCountry()))
                 .collect(Collectors.toList());
-
-
-//        System.out.println("----> " + entityManager);
-//        CurrencyEntity currencyEntity = entityManager.find(CurrencyEntity.class, 1L);
-//        System.out.println("Currency : " + currencyEntity.getCode());
-
-//        List<Currency> res = new ArrayList<>();
-//        res.add(new Currency("CHF", "756", "Swiss franc", "Switzerland"));
-//        res.add(new Currency("EUR", "978", "Euro", "France"));
-//        res.add(new Currency("USD", "840)", "United States dollar", "United States"));
-//        res.add(new Currency("BRL", "986", "Brazilian real", "Brazil"));
-//        res.add(new Currency("JPY", "392", "Japanese yen", "Japan"));
-//        return res;
     }
 }
