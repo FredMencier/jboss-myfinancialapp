@@ -5,8 +5,12 @@
 Application JEE EAP 6.4
 - Module EAR
   - Packaging de l'app
+- Module DA
+  - Module d'accès à la base de données
 - Module EJB
   - EJB 3.0 Business (Stateless et Stateful)
+- Module Dto
+  - Module POJO
 - Module WAR
   - Servlet
 
@@ -45,11 +49,11 @@ Build and Deploy the Archive
 
 Build du projet sans les tests :
 
-        mvn clean install -DskipTests
+`mvn clean install -DskipTests`
 
 Deploy du projet
 
-        mvn jboss-as:deploy
+`mvn jboss-as:deploy`
 
 Déploie le fichier  `jboss-myfinancialapp/MyFinancial/target/MyFinancial-1.0.0-SNAPSHOT.ear` sur l'instance du server jboss.
 
@@ -66,7 +70,7 @@ Undeploy the Archive
 
 Undeploy l'allipcation
 
-        mvn jboss-as:undeploy
+`mvn jboss-as:undeploy`
 
 Debug the Application
 ------------------------------------
@@ -98,10 +102,9 @@ Modification du port par défaut :
 Start the JBoss EAP Server
 -------------------------
 
-mvn clean install quarkus:dev
+`mvn clean install quarkus:dev`
 
 Access the application
------------[rewrite.patch](target%2Frewrite%2Frewrite.patch)----------
 
 URL de la servlet : <http://localhost:8081/FinancialServlet>
 URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
@@ -110,8 +113,3 @@ URL de l'API Rest : <http://localhost:8081/rest/currency/currencies>
 -> Servlet mettre un fond d'écran Devoxx
 -> voir si possible d'ajouter un bean dans le consructeur de FinancialAPI
 -> voir si possible d'appeler FindAndReplace depuis le code en paramétrant MyFinancialWeb
-
-
-Test : 18.03
-- 30 minutes dias + demo1
-- 15 minutes demo2
