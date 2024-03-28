@@ -36,6 +36,7 @@ If you need to have openjdk@8 first in your PATH, run:
 
 Mettre le jdk8 en premier dans le path
 - export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+- export PATH="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:$PATH"
 
 Start the JBoss EAP Server
 -------------------------
