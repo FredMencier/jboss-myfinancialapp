@@ -19,9 +19,9 @@ Quarkus
 Compilation et start de Quarkus
 `mvn clean package quarkus:dev`
 
-Quarkus dev-u[rewrite.patch](target%2Frewrite%2Frewrite.patch)i
+Quarkus dev-ui
 http://localhost:8081/q/dev-ui/extensions
 Quarkus App
 http://localhost:8081/FinancialServlet
 
-`mvn clean package -Drewrite.recipeArtifactCoordinates="org.example:test-lib-rewrite:1.0.0-SNAPSHOT" -Drewrite.activeRecipes="org.exemple.rest.BlockingToReactiveRest" org.openrewrite.maven:rewrite-maven-plugin:5.19.0:dryRun`
+`mvn clean package -Drewrite.recipeArtifactCoordinates="org.example:test-lib-rewrite:1.0.0-SNAPSHOT" -Drewrite.activeRecipes="org.exemple.rest.BlockingToReactiveRest" org.openrewrite.maven:rewrite-maven-plugin:5.19.0:run`
