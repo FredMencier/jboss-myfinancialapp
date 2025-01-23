@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class Currency {
 
     private String code;
@@ -15,4 +14,10 @@ public class Currency {
 
     private String country;
 
+    public Currency(String code, String num, String name, String country) {
+        this.code = code;
+        this.num = num;
+        this.name = name;
+        this.country = country;
+    }
 }
